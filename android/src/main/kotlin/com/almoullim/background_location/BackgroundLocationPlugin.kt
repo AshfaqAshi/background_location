@@ -1,5 +1,6 @@
 package com.almoullim.background_location
 
+
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.FlutterPlugin.FlutterPluginBinding
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
