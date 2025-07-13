@@ -4,7 +4,7 @@ import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.FlutterPlugin.FlutterPluginBinding
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding
-import io.flutter.plugin.common.PluginRegistry
+import io.flutter.plugin.common.PluginRegistry.Registrar
 
 
 class BackgroundLocationPlugin : FlutterPlugin, ActivityAware {
@@ -15,7 +15,7 @@ class BackgroundLocationPlugin : FlutterPlugin, ActivityAware {
         Legacy for v1 embedding
          */
         @SuppressWarnings("deprecation")
-        fun registerWith(registrar: PluginRegistry.Registrar) {
+        fun registerWith(registrar: Registrar) {
             val service = BackgroundLocationService.getInstance()
             service.onAttachedToEngine(registrar.context(), registrar.messenger())
             registrar.addRequestPermissionsResultListener(service)
